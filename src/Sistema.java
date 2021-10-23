@@ -11,8 +11,10 @@ import javax.swing.JOptionPane;
 //importando a classe Jtext
 import javax.swing.JTextField;
 //importando a classe bUTTON
-import javax.swing.JRadioButton;
-
+import javax.swing.JButton;
+//Importando classe ActionEvent qu reliza uma ação com o clique do mouse
+import java.awt.event.ActionEvent;
+import  java.awt.event.ActionListener;
 
 public class Sistema {
 
@@ -64,6 +66,14 @@ public class Sistema {
         checkBox.setBounds(20,250,360,40);
 
         JButton button=new JButton("ENVIAR");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null,"Botão foi acionado");
+            }
+        });
+
+
         button.setBounds(20,280,360,40);
 
 
